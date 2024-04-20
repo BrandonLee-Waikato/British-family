@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>British Royal Family</title>
+
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="leaflet/leaflet.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+        crossorigin="anonymous">
+</head>
+
+<body>
+
+  <div id="main-container"> <!-- 新的flex容器包裹地图和原有的.container -->
+<!--    <h1>British Royal Family</h1>-->
+    <br></br>
+    <br></br>
+    <div id="map-container" style="margin-bottom: 100px">
+      <div id="mapid" style="width: 1500px; height: 400px;"></div>
+    </div>
+
+    <div class="container">
+
+
+      <div class="container-2">
+        <div id="images-container">
+          <div class="image-item">
+            <div class="image"><img src="img/1926-伊丽莎白二世出生.png" class="img1 clickable-image" data-gen="g1"  data-coordinates='[[51.509, -0.14], [51.503, -0.15], [51.51, -0.13]]'/></div>
+            <div class="dot">1926</div>
+            <div class="text">
+              <h2>Birth of Queen Elizabeth II (1926)</h2>
+              Princess Elizabeth was born at 2.40am on 21 April 1926 at 17 Bruton Street in Mayfair, London. She was the first child of the Duke and Duchess of York, who later became King George VI and Queen Elizabeth. The Princess was christened Elizabeth Alexandra Mary at Buckingham Palace on 29 May that year.
+            </div>
+          </div>
+          <div class="image-item">
+            <div class="image"><img src="img/1936-爱德华八世退位危机.png" class="img2 clickable-image" data-gen="g2" data-coordinates='[[51.4, -0.61], [51.45, -0.66], [51.43, -0.72]]'/></div>
+            <div class="dot">1936</div>
+            <div class="text">
+              <h2>Edward VIII Abdication Crisis (1936)</h2>
+              The abdication of King Edward VIII in December 1936 was a pivotal moment in British history. He chose to abdicate after less than a year on the throne to marry Wallis Simpson, an American divorcee. This decision was controversial as it went against the advice of the government and caused a constitutional crisis, leading to his younger brother, George VI, ascending to the throne.
+            </div>
+          </div>
+
+          <div class="image-item">
+            <div class="image"><img src="img/1944-诺曼底登陆Royal Marine commandos moving off the Normandy Beaches.png" class="img3 clickable-image" data-gen="g3" data-coordinates='[[49.44347339867133, -1.5676562151367317], [49.83792683244587, 1.1765036175550592], [48.649000903895356, -0.1004955758915896]]'/></div>
+            <div class="dot">1944</div>
+            <div class="text">
+              <h2>British Royal Family During WWII (1939-1945 Normandy Landings)</h2>
+              During World War II, the British royal family remained in London, enduring the same air raids as their subjects, which significantly boosted public morale. King George VI and Queen Elizabeth famously refused to leave Buckingham Palace, despite the bombings. Their daughters, Elizabeth and Margaret, spent much of the war at Windsor Castle, but the royal family's visibility and engagement during the conflict solidified their role as symbols of national resilience.
+            </div>
+          </div>
+
+          <div class="image-item">
+            <div class="image"><img src="img/1947-未来的伊丽莎白二世与菲利普亲王结婚。.png" class="img4 clickable-image" data-gen="g4" data-coordinates='[[51.499698792337, -0.1284600332162262], [51.499668728968345, -0.12653419230941376], [51.49871364600139, -0.12742470480273602]]'/></div>
+            <div class="dot">1947</div>
+            <div class="text">
+              <h2>Wedding of Princess Elizabeth and Prince Philip (1947)</h2>
+              The marriage of Princess Elizabeth to Prince Philip on November 20, 1947, was a post-war celebration that captured the public’s imagination. Their wedding, held at Westminster Abbey, was one of the first major royal events to be broadcast to a wide audience, bringing a sense of renewal and joy in the aftermath of the war.
+            </div>
+          </div>
+
+          <div class="image-item">
+            <div class="image"><img src="img/1973-英国加入欧洲经济共同体（后成为欧盟）.png" class="img5 clickable-image" data-gen="g5" data-coordinates='[[50.8739015453009, 4.3012656739154105], [50.866024574452716, 4.415660827505738], [50.81956911443514, 4.355537210411713]]'/></div>
+            <div class="dot">1973</div>
+            <div class="text">
+              <h2>UK Joins the European Economic Community (1973)</h2>
+              The UK's entry into the European Economic Community on January 1, 1973, marked a significant shift in its economic and political landscape. This move was driven by a desire to boost economic growth through closer ties with neighboring countries, reflecting broader changes in global politics and economics.
+            </div>
+          </div>
+
+          <div class="image-item">
+            <div class="image"><img src="img/1981-查尔斯王子与戴安娜·斯宾塞结婚.png" class="img6 clickable-image" data-gen="g6" data-coordinates='[[51.51453578592769, -0.09831202930524378], [51.51355377496229, -0.09973071471917995], [51.513596234811224, -0.09691615456515364]]'/></div>
+            <div class="dot">1981</div>
+            <div class="text">
+              <h2>Royal Wedding of Prince Charles and Lady Diana (1981)</h2>
+              The royal wedding of Prince Charles to Lady Diana Spencer on July 29, 1981, was a global spectacle, watched by an estimated 750 million people worldwide.
+            </div>
+          </div>
+
+          <div class="image-item">
+            <div class="image"><img src="img/1992-温莎城堡发生火灾.png" class="img7 clickable-image" data-gen="g7" data-coordinates='[[51.48468901105073, -0.6044884869752648], [51.48351981605363, -0.6056687157283833], [51.483660069149266, -0.603243999706381]]'/></div>
+            <div class="dot">1992</div>
+            <div class="text">
+              <h2>Annus Horribilis (1992)</h2>
+              Queen Elizabeth II's "annus horribilis" in 1992 involved public separations, divorces within the family, and a devastating fire at Windsor Castle in November. These personal and public crises were widely reported and marked a challenging period for the monarchy, prompting calls for modernization and change.
+            </div>
+          </div>
+
+          <div class="image-item">
+            <div class="image"> <img src="img/2016-英国脱欧公投，英国决定离开欧盟.png" class="img8 clickable-image" data-gen="g8" data-coordinates='[[58.584152915114196, -4.657725817056429], [54.313583228488184, -7.589336848637753], [50.931978249295625, -0.19632486269879582]]'/></div>
+            <div class="dot">2016</div>
+            <div class="text">
+              <h2>Brexit Referendum (2016)</h2>
+              The Brexit referendum on June 23, 2016, marked a critical moment in UK history as the British public voted to leave the European Union. The decision, won by a narrow margin, reflected deep divisions within the country and triggered a series of political upheavals, including the resignation of the then Prime Minister. The referendum was a response to growing concerns over sovereignty and immigration, and its consequences have been profound and far-reaching, reshaping the UK's relationship with Europe and the rest of the world.
+            </div>
+          </div>
+
+          <div class="image-item">
+            <div class="image"><img src="img/2022-伊丽莎白二世.png" class="img9 clickable-image" data-gen="g9" data-coordinates='[[57.04166130929262, -3.229284178895777], [57.03855752340429, -3.2349893253650426], [57.037037927171475, -3.220242220270983]]'/></div>
+            <div class="dot">2022</div>
+            <div class="text">
+              <h2>Death of Queen Elizabeth II (2022)</h2>
+              Queen Elizabeth II passed away on September 8, 2022, ending the longest reign in British history, spanning over 70 years.
+            </div>
+          </div>
+
+
+
+        </div>
+        <div class="images-container-line"></div>
+      </div>
+
+
+
+
+      <div class="family-tree " >
+
+
+
+
+        <div class="generation">
+          <div class="person g1" data-img="img/family-tree-geogreV.png">
+            <h3>George V</h3>
+            <p>Reign: 1910-1936</p>
+            <p>Sons: Edward VIII, George VI</p>
+          </div>
+        </div>
+        <div class="generation">
+          <div class="person g2" data-img="img/Edward VIII family tree.png">
+            <h3>Edward VIII</h3>
+            <p>Reign: 1936</p>
+            <p>Brother: George VI</p>
+            <p>Abdicated due to marriage to Wallis Simpson</p>
+          </div>
+          <div class="person g3" data-img="img/family-tree.png">
+            <h3>George VI</h3>
+            <p>Reign: 1936-1952</p>
+            <p>Daughter: Elizabeth II</p>
+          </div>echo "# British-family-tree" >> README.md
+          git init
+          git add README.md
+          git commit -m "first commit"
+          git branch -M main
+          git remote add origin https://github.com/BrandonLee-Waikato/British-family-tree.git
+          git push -u origin main
+        </div>
+        <div class="generation">
+          <div class="person g9" data-img="img/family-tree.png">
+            <h3>Elizabeth II</h3>
+            <p>Reign: Since 1952</p>
+            <p>Children: Charles, Anne, Andrew, Edward</p>
+            <p>Events: Coronation 1953, Diamond Jubilee 2012</p>
+          </div>
+        </div>
+        <div class="generation">
+          <div class="person g5" data-img="img/family-tree.png">
+            <h3>Charles, Prince of Wales</h3>
+            <p>Son of Elizabeth II</p>
+            <p>Former wife: Diana Spencer</p>
+            <p>Current wife: Camilla Parker Bowles</p>
+            <p>Children: William, Harry</p>
+          </div>
+        </div>
+        <div class="generation">
+          <div class="person g6" data-img="img/family-tree.png">
+            <h3>Diana, Princess of Wales</h3>
+            <p>Former wife of Charles</p>
+            <p>Children: William, Harry</p>
+            <p>Events: Divorced 1996, Died 1997</p>
+          </div>
+          <div class="person g7" data-img="img/family-tree.png">
+            <h3>Prince William, Duke of Cambridge</h3>
+            <p>Son of Charles and Diana</p>
+            <p>Wife: Catherine Middleton</p>
+            <p>Children: George, Charlotte, Louis</p>
+          </div>
+          <div class="person g8" data-img="img/family-tree.png">
+            <h3>Prince Harry, Duke of Sussex</h3>
+            <p>Son of Charles and Diana</p>
+            <p>Wife: Meghan Markle</p>
+            <p>Stepped back as senior member in 2020</p>
+          </div>
+
+        </div>
+      </div>
+
+      <div id="modal" style="display:none; position:fixed; z-index:1000; left:0; top:0; width:100%; height:100%; justify-content:center; align-items:center;">
+        <div style="background:white; padding:20px; border-radius:10px; max-width:600px;">
+          <img id="modal-img" src="" alt="Family Tree" style="width:100%;">
+          <button onclick="closeModal()" style="margin-top:10px;">Close</button>
+        </div>
+      </div>
+      <div id="sidebar" style="display:flex; position:fixed; ">
+        <img id="sidebar-img" src="" alt="Family Tree Image" style="width:auto; height:auto; display:block;">
+      </div>
+    </div>
+
+
+  </div>
+
+
+
+</body>
+</html>
+<script src="leaflet/leaflet.js"></script>
+<script src="js/app.js"></script>

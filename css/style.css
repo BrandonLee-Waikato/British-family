@@ -1,0 +1,225 @@
+body {
+  margin: 0;
+  padding: 0;
+  /* 设置背景色为从上到下的渐变色 */
+  background: linear-gradient(to bottom, #9b9b9b 0%, #ffffff 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#main-container {
+  display: flex;
+  flex-direction: column; /* 堆叠地图和图片容器 */
+  align-items: center; /* 水平居中对齐 */
+  justify-content: start; /* 从顶部开始排列 */
+  width: 90%; /* 宽度为视口宽度的90% */
+  min-height: 100vh; /* 最小高度为视口高度的100% */
+  margin: auto; /* 顶部和底部自动外边距以居中整体内容 */
+}
+.container {
+  position: relative;
+  width: 90%;
+  min-height: 100vh; /* 至少与视口一样高 */
+  display: flex;
+  flex-direction: column;  /* 如果希望地图和图片容器垂直排列 */
+  align-items: center;  /* 水平居中所有子元素 */
+  justify-content: start;  /* 从顶部开始排列子元素 */
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  overflow-y: hidden; /* 如果不需要垂直滚动，则隐藏 */
+}
+
+#map-container {
+  width: 1500px; /* 明确地图容器宽度 */
+  height: 400px; /* 明确地图容器高度 */
+  margin-bottom: 1em; /* 底部外边距 */
+}
+
+/* 确保地图容器不会因Flexbox而缩小 */
+#mapid {
+
+  width: 100%;
+  height: 100%;
+
+}
+.container-2 {
+  padding: 50px 0;
+  overflow-x: auto;  /* 如果内容超出容器宽度，显示水平滚动条 */
+  overflow-y: hidden;  /* 隐藏垂直滚动条 */
+  width: 100%;
+  position: relative;
+}
+#images-container {
+  display: flex;  /* 使得子元素（图片）水平排列 */
+  flex-wrap: nowrap;  /* 防止内容换行 */
+
+  position: relative; /* 作为绝对定位图片的相对容器 */
+
+  padding: 0 50px;
+
+  align-items: flex-start;
+}
+
+.container img {
+   max-height: 280px;
+   display: block;
+   width: auto;
+   position: relative;
+   transition: transform 1s ease;
+ }
+
+.img1 {
+  left: 10px; /* 从左边界开始 */
+  z-index: 1; /* z-index较低，表示在下方 */
+}
+.img2 {
+  left: -10px; /* 相对于其正常位置右移300px */
+  z-index: 2; /* z-index较高，图片会显示在上方 */
+}
+.img3 {
+
+  z-index: 3; /* z-index较高，图片会显示在上方 */
+}
+.img4 {
+  z-index: 4; /* z-index较高，图片会显示在上方 */
+}
+.img5 {
+  left: -20px; /* 相对于其正常位置右移300px */
+  top: 30px;
+  z-index: 3; /* z-index较高，图片会显示在上方 */
+}
+.img6 {
+  left: -30px; /* 相对于其正常位置右移300px */
+  z-index: 5; /* z-index较高，图片会显示在上方 */
+}
+.img7 {
+  left: -30px; /* 相对于其正常位置右移300px */
+  z-index: 3; /* z-index较高，图片会显示在上方 */
+}
+.img8 {
+  left: -50px; /* 相对于其正常位置右移300px */
+  z-index: 6; /* z-index较高，图片会显示在上方 */
+}
+.img9 {
+  width: 150%;
+  height: 150%;
+  top: 15px;
+  left: -20px; /* 相对于其正常位置右移300px */
+  z-index: 7; /* z-index较高，图片会显示在上方 */
+}
+
+
+.clickable-image:hover {
+  cursor: pointer;
+  transform: scale(1.2); /* 放大到150%的大小 */
+  filter:drop-shadow(0 0 5px #ffc643);
+  z-index: 999;
+}
+.active-animation {
+  transform: scale(1.2); /* 放大到150%的大小 */
+  transition: transform 1s ease; /* 平滑变换 */
+  filter:drop-shadow(0 0 5px #ffc643);
+  z-index: 999;
+}
+
+.gen-animation {
+  filter:drop-shadow(0 0 5px #ffc643);
+}
+
+.text{
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  background-color: #f9f9f9;
+  box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+}
+
+/*族谱*/
+.family-tree {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.generation {
+  display: flex;
+  justify-content: center;
+  margin: 20px;
+}
+
+.person {
+  margin: 0 10px;
+  text-align: center;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  background-color: #f9f9f9;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.person .name {
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.person .dates {
+  font-size: 14px;
+  color: #666;
+}
+
+.person .details {
+  font-size: 12px;
+  color: #888;
+  margin-top: 5px;
+}
+
+
+/**/
+.image-item {
+  text-align: center;
+}
+
+.image-item .image {
+  height: 300px;
+}
+.image-item .dot {
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  line-height: 50px;
+  margin: 0 auto;
+  color: #fff;
+  background: url("/img/Dark-grundle.jpg");
+}
+.image-item .text {
+  padding: 10px;
+}
+
+.images-container-line {
+  border-top: 3px dashed #000;
+  position: absolute;
+  top: 375px;
+  z-index: -1;
+  width: 2700px;
+}
+
+
+#sidebar {
+  transition: transform 0.5s ease-in-out, opacity 0.5s ease;
+  transform: translateX(-100%);
+  opacity: 0;
+  z-index: 1000; /* 确保z-index足够高以覆盖其他元素 */
+  width: 300px; /* 侧边栏宽度 */
+  position: fixed; /* 固定位置 */
+  top: 0; /* 顶部对齐 */
+  left: 0; /* 左侧对齐 */
+  height: 100%; /* 全屏高 */
+
+
+}
+
+#sidebar.visible {
+  transform: translateX(0%);
+  opacity: 1;
+}
+
